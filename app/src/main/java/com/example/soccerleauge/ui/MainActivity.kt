@@ -1,7 +1,8 @@
-package com.example.soccerleauge
+package com.example.soccerleauge.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.soccerleauge.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
