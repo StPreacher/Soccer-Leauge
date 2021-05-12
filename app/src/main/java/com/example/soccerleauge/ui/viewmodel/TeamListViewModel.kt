@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class TeamListViewModel @Inject constructor(val repository: TeamRepository) : ViewModel() {
+class TeamListViewModel @Inject constructor(private val repository: TeamRepository) : ViewModel() {
 
     val team = MutableLiveData<Resource<List<TeamInfo>>>()
 

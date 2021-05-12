@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.soccerleauge.R
 import com.example.soccerleauge.ui.viewmodel.TeamListViewModel
 import com.example.soccerleauge.util.Status
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val viewmodel : TeamListViewModel by viewModels()

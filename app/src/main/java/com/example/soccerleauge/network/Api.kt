@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface Api {
 
-    @GET("/json/1/lookup_all_teams.php?id=4339")
+    @GET("json/1/lookup_all_teams.php?id=4339")
     suspend fun getTeams() : Response<Teams>
 
 }
