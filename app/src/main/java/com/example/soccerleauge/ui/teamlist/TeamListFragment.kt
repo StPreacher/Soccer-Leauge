@@ -57,7 +57,6 @@ class TeamListFragment : Fragment() {
                 Status.SUCCESS -> {
                     progressBar.hide()
                     teamListAdapter.teamList = it.data!!
-                    //TODO updateTeamList dene olmazsa
                     teamListAdapter.notifyDataSetChanged()
                 }
 
