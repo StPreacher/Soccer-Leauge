@@ -14,5 +14,8 @@ interface Dao {
     @Query("SELECT * FROM team_info")
     fun getAllTeams() : List<TeamResponse>
 
+    @Query("SELECT team_name FROM team_info")
+    fun getAllTeamNames() : List<String>
+
 
 }

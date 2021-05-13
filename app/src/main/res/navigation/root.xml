@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/fixtureFragment"
-        android:name="com.example.soccerleauge.ui.FixtureFragment"
+        android:name="com.example.soccerleauge.ui.fixture.FixtureFragment"
         android:label="Fixture"
         tools:layout="@layout/fragment_fixture" />
 </navigation>
