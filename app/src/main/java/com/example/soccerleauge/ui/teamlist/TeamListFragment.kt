@@ -9,7 +9,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Room
 import com.example.soccerleauge.R
+import com.example.soccerleauge.db.Database
 import com.example.soccerleauge.ui.viewmodel.TeamListViewModel
 import com.example.soccerleauge.util.Status
 import com.example.soccerleauge.util.hide
@@ -21,6 +23,7 @@ import kotlinx.android.synthetic.main.fragment_team_list.*
 class TeamListFragment : Fragment() {
 
     private val teamListAdapter = TeamListAdapter(arrayListOf())
+    private lateinit var database : Database
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,8 +37,12 @@ class TeamListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val viewmodel : TeamListViewModel by viewModels()
+        database =  Room.databaseBuilder(view.context,Database::class.java,"team_info")
+            .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .build()
 
-        viewmodel.getTeamData()
+        viewmodel.getTeamData(database)
 
         teamListView.apply {
             layoutManager = LinearLayoutManager(context)

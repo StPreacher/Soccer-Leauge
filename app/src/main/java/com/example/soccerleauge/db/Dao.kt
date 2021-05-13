@@ -9,7 +9,7 @@ import com.example.soccerleauge.model.TeamResponse
 interface Dao {
 
     @Insert
-    fun insertTeam(vararg teamInfo : TeamResponse)
+    fun insertTeam(teamInfo : List<TeamResponse>)
 
     @Query("SELECT * FROM team_info")
     fun getAllTeams() : List<TeamResponse>
