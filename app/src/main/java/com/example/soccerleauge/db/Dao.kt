@@ -3,16 +3,16 @@ package com.example.soccerleauge.db
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.soccerleauge.model.Teams
+import com.example.soccerleauge.model.TeamResponse
 
 @Dao
 interface Dao {
 
     @Insert
-    fun insertTeam(teams: Teams)
+    fun insertTeam(vararg teamInfo : TeamResponse)
 
-    @Query("SELECT * FROM teams")
-    fun getAllTeams() : Teams
+    @Query("SELECT * FROM team_info")
+    fun getAllTeams() : List<TeamResponse>
 
 
 }

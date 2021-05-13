@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/teamListFragment"
-        android:name="com.example.soccerleauge.ui.TeamListFragment"
+        android:name="com.example.soccerleauge.ui.teamlist.TeamListFragment"
         android:label="fragment_team_list"
         tools:layout="@layout/fragment_team_list" />
     <fragment
