@@ -1,6 +1,7 @@
 package com.example.soccerleauge.util
 
 import android.content.Context
+import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
@@ -21,7 +22,6 @@ fun ImageView.loadImage(uri: String?,progressDrawable: CircularProgressDrawable)
     val options = RequestOptions()
         .placeholder(progressDrawable)
         .error(R.mipmap.ic_launcher_round)
-        .circleCrop()
     Glide.with(context)
         .setDefaultRequestOptions(options)
         .load(uri)
@@ -31,4 +31,11 @@ fun ImageView.loadImage(uri: String?,progressDrawable: CircularProgressDrawable)
 @BindingAdapter("android:imageUrl")
 fun loadImage(view : ImageView, url : String?){
     view.loadImage(url, getProgressDrawable(view.context))
+}
+
+fun View.show(){
+    this.visibility = View.VISIBLE
+}
+fun View.hide(){
+    this.visibility = View.GONE
 }

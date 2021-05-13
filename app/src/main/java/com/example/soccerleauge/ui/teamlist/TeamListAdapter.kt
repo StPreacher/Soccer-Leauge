@@ -11,7 +11,7 @@ import com.example.soccerleauge.model.TeamResponse
 import com.example.soccerleauge.util.getProgressDrawable
 import com.example.soccerleauge.util.loadImage
 
-class TeamListAdapter(val teamList : List<TeamResponse>) :
+class TeamListAdapter(var teamList : List<TeamResponse>) :
     RecyclerView.Adapter<TeamListAdapter.TeamVH>() {
 
     inner class TeamVH(var view : ItemTeamBinding) : RecyclerView.ViewHolder(view.root) {
