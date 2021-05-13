@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
@@ -36,12 +37,13 @@ class TeamListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewmodel : TeamListViewModel by viewModels()
+
         database =  Room.databaseBuilder(view.context,Database::class.java,"team_info")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
 
+        val viewmodel : TeamListViewModel by viewModels()
         viewmodel.getTeamData(database)
 
         teamListView.apply {
@@ -52,6 +54,11 @@ class TeamListFragment : Fragment() {
         }
 
         observeViewModel(viewmodel)
+
+        drawFixtureBtn.setOnClickListener {
+            val action = TeamListFragmentDirections.actionToFixtureFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
     }
 

@@ -9,7 +9,11 @@
         android:id="@+id/teamListFragment"
         android:name="com.example.soccerleauge.ui.teamlist.TeamListFragment"
         android:label="Teams"
-        tools:layout="@layout/fragment_team_list" />
+        tools:layout="@layout/fragment_team_list" >
+        <action
+            android:id="@+id/action_to_fixture_fragment"
+            app:destination="@id/fixtureFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fixtureFragment"
         android:name="com.example.soccerleauge.ui.FixtureFragment"
