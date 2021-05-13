@@ -1,7 +1,6 @@
 package com.example.soccerleauge.ui.fixture
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.LinearSnapHelper
 import com.example.soccerleauge.R
 import com.example.soccerleauge.ui.viewmodel.FixtureViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -34,6 +33,9 @@ class FixtureFragment : Fragment() {
 
         val viewmodel : FixtureViewModel by viewModels()
         viewmodel.getAllTeamNames()
+
+        val snapHelper = LinearSnapHelper()
+        snapHelper.attachToRecyclerView(baseRecyclerView)
 
         baseRecyclerView.apply {
             layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)

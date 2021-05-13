@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_team_list" >
         <action
             android:id="@+id/action_to_fixture_fragment"
-            app:destination="@id/fixtureFragment" />
+            app:destination="@id/fixtureFragment"
+            app:exitAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/fixtureFragment"

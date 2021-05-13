@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soccerleauge.R
-import kotlinx.android.synthetic.main.fragment_fixture.view.*
 import kotlinx.android.synthetic.main.item_fixture_base.view.*
 
 class FixtureBaseAdapter(var fixtureList: MutableList<Array<Array<String>>>) :
