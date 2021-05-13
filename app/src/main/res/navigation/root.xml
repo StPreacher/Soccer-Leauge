@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/teamListFragment"
         android:name="com.example.soccerleauge.ui.teamlist.TeamListFragment"
-        android:label="fragment_team_list"
+        android:label="Teams"
         tools:layout="@layout/fragment_team_list" />
     <fragment
         android:id="@+id/fixtureFragment"
         android:name="com.example.soccerleauge.ui.FixtureFragment"
-        android:label="fragment_fixture"
+        android:label="Fixture"
         tools:layout="@layout/fragment_fixture" />
 </navigation>
