@@ -14,6 +14,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    //TODO Navigation - Fragment - SomeAlgorythm
+
     private val viewmodel : TeamListViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
