@@ -1,32 +1,21 @@
 package com.example.soccerleauge.ui
 
-import android.annotation.SuppressLint
-import android.app.Dialog
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.Window
-import android.widget.Switch
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.soccerleauge.R
-import com.example.soccerleauge.ui.settings.SettingFragment
-import com.example.soccerleauge.ui.teamlist.TeamListFragment
-import com.example.soccerleauge.ui.viewmodel.TeamListViewModel
-import com.example.soccerleauge.util.Status
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.custom_dialog.*
 
 @AndroidEntryPoint
 class MainActivity() : AppCompatActivity() {
 
     private lateinit var navController : NavController
-    private val fragmentSettings = SettingFragment()
 
 
 

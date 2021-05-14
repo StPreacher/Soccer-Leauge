@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soccerleauge.R
 import kotlinx.android.synthetic.main.item_fixture_child.view.*
-import java.util.*
 
 class FixtureChildAdapter(var fixtureChildList : Array<Array<String>>) :
     RecyclerView.Adapter<FixtureChildAdapter.ChildViewHolder>() {

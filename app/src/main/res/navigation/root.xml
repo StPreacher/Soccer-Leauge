@@ -20,9 +20,4 @@
         android:name="com.example.soccerleauge.ui.fixture.FixtureFragment"
         android:label="Fixture"
         tools:layout="@layout/fragment_fixture" />
-    <fragment
-        android:id="@+id/settingFragment2"
-        android:name="com.example.soccerleauge.ui.settings.SettingFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
 </navigation>
